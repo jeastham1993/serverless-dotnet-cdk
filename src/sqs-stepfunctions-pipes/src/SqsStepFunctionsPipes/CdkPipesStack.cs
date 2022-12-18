@@ -26,8 +26,8 @@ namespace SqsStepFunctionsPipes
                 Definition = mapState
             });
             
-            var pipe = new PipeBuilder(this)
-                .AddSqsSource(queue)
+            var pipe = new PipeBuilder(this, "SqsToStepFunctionsPipe")
+                .AddSqsSource(queue, 1, 0)
                 .AddStepFunctionTarget(targetStepFunction)
                 .Build();
         }

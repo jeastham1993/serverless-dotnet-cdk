@@ -10,7 +10,7 @@ namespace SqsStepFunctionsPipes
         public static void Main(string[] args)
         {
             var app = new App();
-            new SqsStepFunctionsPipes(app, "SqsStepFunctionsPipesStack", new StackProps{});
+            new SqsStepFunctionsPipesStack(app, "SqsStepFunctionsPipesStack", new StackProps{});
             app.Synth();
         }
     }
